@@ -1,0 +1,8 @@
+.screen-reader-text,
+.screen-reader-text span,
+.search-form label {
+    clip: rect(0, 0, 0, 0);
+    height: 0;
+    position: absolute;
+    width: 0;
+}
