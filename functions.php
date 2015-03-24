@@ -41,6 +41,9 @@ function b93_theme_setup() {
   // Remove edit post/page link
   add_filter ( 'genesis_edit_post_link' , '__return_false' );
 
+  // Show Author Box (http://my.studiopress.com/snippets/author-box/)
+  // add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
+  // add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
 }
 
 
@@ -69,4 +72,47 @@ function b93_header_inline_logo( $title, $inside, $wrap ) {
 
   return sprintf( '<%1$s %2$s>%3$s</%1$s>', $wrap, genesis_attr( 'site-title' ), $inside );
 
+}
+
+add_filter( 'comment_form_defaults', 'b93_remove_comment_form_allowed_tags' );
+/**
+ * Remove the allowed tags from the comment form
+ * @param  array $defaults array of values
+ * @return array           empty list of comment allowed tags
+ */
+function b93_remove_comment_form_allowed_tags( $defaults ) {
+    $defaults['comment_notes_after'] = '';
+    return $defaults;
+}
+
+add_filter( 'genesis_author_box_gravatar_size', 'b93_author_box_gravatar' );
+/**
+ * Modify gravatar size in author box
+ * @param  string $size avatar size
+ * @return string       modified avatar size
+ */
+function b93_author_box_gravatar( $size ) {
+    return 160;
+}
+
+add_filter( 'genesis_comment_list_args', 'b93_comments_gravatar' );
+/**
+ * Modify avatar size in comments list
+ * @param  array $args array of arguments
+ * @return array       modified size of avatar in comment list
+ */
+function b93_comments_gravatar( $args ) {
+    $args['avatar_size'] = 100;
+    return $args;
+}
+
+add_filter( 'body_class', 'b93_body_class' );
+/**
+ * Add custom CSS classes to the body tag
+ *
+ * @param  array $classes CSS classes added to the body tag
+ * @return array          modified array of classes for the body tag
+ */
+function b93_body_class( $classes ) {
+    return $classes;
 }
