@@ -1,0 +1,11 @@
+.avatar {
+  float: left;
+
+  .alignleft & {
+    margin-right: $base-spacing-unit;
+  }
+
+  .alignright & {
+    margin-left: $base-spacing-unit;
+  }
+}

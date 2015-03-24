@@ -1,0 +1,124 @@
+// Site Wrap
+.site-inner,
+.wrap {
+  margin: 0 auto;
+  max-width: $base-website-width;
+
+  @media only screen and (max-width: 800px) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  @media only screen and (max-width: 960px) {
+    max-width: 800px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    max-width: 960px;
+  }
+}
+
+.site-inner {
+  clear: both;
+  padding-top: 40px;
+}
+
+
+// Wrapper Div for .content and .sidebar-primary
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  width: 980px;
+
+  @media only screen and (max-width: 960px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 740px
+  }
+}
+
+.content-sidebar-sidebar .content-sidebar-wrap {
+  float: left;
+}
+
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  float: right;
+}
+
+
+// Content Area
+.content {
+  float: right;
+  width: 800px;
+
+  @media only screen and (max-width: 960px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 620px;
+  }
+
+  .content-sidebar &,
+  .content-sidebar-sidebar &,
+  .sidebar-content-sidebar & {
+    float: left;
+
+    @media only screen and (max-width: 960px) {
+      width: 100%;
+    }
+  }
+
+  .content-sidebar-sidebar &,
+  .sidebar-content-sidebar &,
+  .sidebar-sidebar-content & {
+    width: 580px;
+
+    @media only screen and (max-width: 1200px) {
+      width: 400px;
+    }
+  }
+
+  .full-width-content & {
+    width: 100%;
+  }
+
+}
+
+
+// Primary Sidebar
+.sidebar-primary {
+  float: right;
+  width: 360px;
+
+  @media only screen and (max-width: 960px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 300px;
+  }
+
+  .sidebar-content &,
+  .sidebar-sidebar-content & {
+    float: left;
+  }
+}
+
+
+// Secondary Sidebar
+.sidebar-secondary {
+  float: left;
+  width: 180px;
+
+  @media only screen and (max-width: 960px) {
+    width: 100%;
+  }
+
+  .content-sidebar-sidebar & {
+    float: right;
+  }
+}
