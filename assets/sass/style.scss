@@ -23,18 +23,57 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 //---------------------------------------------------
 @import "generic/_generic.normalize";
 @import "generic/_generic.box-sizing";
+@import "generic/_generic.clearing";
+
 
 // 4: Base
 //---------------------------------------------------
+@import "base/_base.page";
+@import "base/_base.links";
+@import "base/_base.type";
+@import "base/_base.objects";
 
 
 // 5: Objects
 //---------------------------------------------------
+@import "objects/_objects.layout";
+@import "objects/_objects.columns";
+@import "objects/_objects.avatar";
 
 
 // 6: Components
 //---------------------------------------------------
+@import "components/_components.widget";
+@import "components/_components.table";
+@import "components/_components.button";
+@import "components/_components.form";
+@import "components/_components.search-form";
+@import "components/_components.wordpress";
+@import "components/_components.header";
+@import "components/_components.navigation";
+  @import "components/_components.navigation--header";
+  @import "components/_components.navigation--primary";
+  @import "components/_components.navigation--secondary";
+@import "components/_components.breadcrumb";
+@import "components/_components.entry";
+  @import "components/_components.entry--title";
+  @import "components/_components.entry--meta";
+  @import "components/_components.entry--content";
+  @import "components/_components.gallery";
+  @import "components/_components.author-box";
+  @import "components/_components.comments";
+@import "components/_components.archive";
+@import "components/_components.pagination";
+@import "components/_components.sidebar";
 
 
-// 7: Trumps
+// 7: Plugins
 //---------------------------------------------------
+@import "plugins/_plugins.enews";
+@import "plugins/_plugins.jetpack";
+
+
+// 8: Trumps
+//---------------------------------------------------
+@import "trumps/_trumps.clearfix";
+@import "trumps/_trumps.screen-reader-text";
