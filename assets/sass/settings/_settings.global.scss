@@ -1,0 +1,10 @@
+// Font Sizes & Line Height
+$base-font-size:   16px;
+$base-line-height: 1.625;
+
+
+// Spacing
+$base-spacing-unit:                round( $base-font-size * $base-line-height );
+$base-spacing-unit--quarter:       $base-spacing-unit * .25;
+$base-spacing-unit--half:          $base-spacing-unit * .5;
+$base-spacing-unit--three-quarter: $base-spacing-unit * .75;
