@@ -1,0 +1,30 @@
+.pagination {
+  clear: both;
+  margin: 40px 0;
+}
+
+.adjacent-entry-pagination {
+  margin-bottom: 0;
+}
+
+.archive-pagination li {
+  display: inline;
+}
+
+.archive-pagination li a {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px 12px;
+
+  @media only screen and (max-width: 800px) {
+    margin-bottom: 4px;;
+  }
+}
+
+.archive-pagination li a:hover,
+.archive-pagination .active a {
+  background-color: #e5554e;
+}

@@ -1,0 +1,38 @@
+// Button Mixin
+@mixin button-base {
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  padding: 16px 24px;
+  text-transform: uppercase;
+  width: auto;
+
+  &:hover {}
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+
+// Buttons
+.button,
+a.button {
+  @include button-base;
+  display: inline-block;
+
+  &:hover { }
+}
+
+  // Small Button
+  .button--small {}
+
+  // Large Button
+  .button--large {}
+
+  // Outlined Button
+  .button--outline {}

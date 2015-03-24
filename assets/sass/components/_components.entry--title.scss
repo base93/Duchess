@@ -1,0 +1,17 @@
+// Entry Title
+.entry-title {
+  font-size: 36px;
+
+  a {
+    color: #333;
+
+    &:hover {
+      color: #e5554e;
+    }
+  }
+
+  // Featured Content
+  .featured-content & {
+    font-style: 20px;
+  }
+}

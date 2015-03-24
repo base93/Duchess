@@ -1,0 +1,32 @@
+// Entry Content
+.entry-content {
+  ol, ul {
+    margin-bottom: $base-spacing-unit;
+    margin-left: 40px;
+  }
+
+    ol > li { list-style-type: decimal; }
+
+    ul > li { list-style-type: disc; }
+
+  ol ol,
+  ul ul {
+    margin-bottom: 0;
+  }
+
+  .button {
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  code {
+    background-color: #333;
+    color: #ddd;
+  }
+
+}
+
+.entry-content p.wp-caption-text {
+  margin-bottom: 0;
+}

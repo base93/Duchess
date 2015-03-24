@@ -1,0 +1,27 @@
+.author-box {
+  background-color: #fff;
+  font-size: 16px;
+  margin-bottom: 40px;
+  padding: 40px;
+
+  @media only screen and (max-width: 800px) {
+    padding: 0;
+  }
+
+  // Avatar
+  .avatar {
+    margin-right: $base-spacing-unit;
+  }
+
+  // Paragraphs
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.author-box-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+}

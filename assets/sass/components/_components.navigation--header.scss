@@ -1,0 +1,19 @@
+.site-header {
+
+  ul.genesis-nav-menu {
+    @media only screen and (max-width: 960px) {
+      float: none;
+    }
+  }
+  
+  .sub-menu {
+    border-top: 1px solid #eee;
+  }
+
+  .sub-menu .sub-menu {
+    margin-top: -56px;
+  }
+    .genesis-nav-menu li li {
+    margin-left: 0;
+  }
+}

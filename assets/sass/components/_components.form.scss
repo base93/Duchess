@@ -1,0 +1,56 @@
+// Form Elements
+input,
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 16px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #999;
+  outline: none;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+  width: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+  display: none;
+}
+
+
+// Placeholder text styles
+::-moz-placeholder {
+  color: #333;
+  font-weight: 300;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #333;
+  font-weight: 300;
+}
+
+
+// Button styles
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @include button-base;
+
+  &:hover {
+    background-color: #e5554e;
+    color: #fff;
+  }
+}

@@ -1,0 +1,26 @@
+// Entry Meta
+.entry-meta {
+  .entry-header & {
+    margin-bottom: 24px;
+  }
+
+  .entry-footer & {
+    border-top: 2px solid #f5f5f5;
+    padding-top: 24px;
+  }
+}
+
+p.entry-meta {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.entry-categories,
+.entry-tags {
+  display: block;
+}
+
+.entry-comments-link::before {
+  content: "\2014";
+  margin: 0 6px 0 2px;
+}

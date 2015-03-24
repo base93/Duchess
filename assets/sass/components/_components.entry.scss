@@ -1,0 +1,23 @@
+// Entry
+.entry {
+  margin-bottom: 40px;
+  padding: 50px 60px;
+
+  @media only screen and (max-width: 800px) {
+    padding: 0;
+  }
+
+  .content & {
+    background-color: #fff;
+  }
+
+  .featured-content & {
+    border-bottom: 2px solid #f5f5f5;
+    margin-bottom: 20px;
+    padding: 0 0 24px;
+  }
+
+  .footer-widget & {
+    border-bottom: 1px dotted #666;
+  }
+}
