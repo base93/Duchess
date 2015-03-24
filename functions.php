@@ -47,6 +47,25 @@ function b93_theme_setup() {
 }
 
 
+add_action( 'wp_enqueue_scripts', 'b93_enqueue_scripts_styles' );
+/**
+ * Enqueue scripts and styles
+ * @return  enqueued scripts and stylesheets
+ */
+function b93_enqueue_scripts_styles() {
+}
+
+add_filter( 'body_class', 'b93_body_class' );
+/**
+ * Add custom body class to the body tag
+ * @param  array $classes array of css classes added to the body element
+ * @return array          array of css classes (including ours) added to the body element
+ */
+function b93_body_class( $classes ) {
+  $classes[] = '';
+  return $classes;
+}
+
 add_filter( 'genesis_seo_title', 'b93_header_inline_logo', 10, 3 );
 /**
  * Remove the default site title and replace with an image tag
@@ -104,15 +123,4 @@ add_filter( 'genesis_comment_list_args', 'b93_comments_gravatar' );
 function b93_comments_gravatar( $args ) {
     $args['avatar_size'] = 100;
     return $args;
-}
-
-add_filter( 'body_class', 'b93_body_class' );
-/**
- * Add custom CSS classes to the body tag
- *
- * @param  array $classes CSS classes added to the body tag
- * @return array          modified array of classes for the body tag
- */
-function b93_body_class( $classes ) {
-    return $classes;
 }
