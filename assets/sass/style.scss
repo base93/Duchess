@@ -49,6 +49,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "components/_components.form";
 @import "components/_components.search-form";
 @import "components/_components.wordpress";
+@import "components/_components.flash-alerts";
 @import "components/_components.header";
 @import "components/_components.navigation";
   @import "components/_components.navigation--header";
@@ -65,6 +66,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import "components/_components.archive";
 @import "components/_components.pagination";
 @import "components/_components.sidebar";
+@import "components/_components.footer--widgets";
+@import "components/_components.footer";
 
 
 // 7: Plugins
