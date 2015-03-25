@@ -1,5 +1,6 @@
 # Ignore sass-cache
 .sass-cache/
 
-# Ignore codekit config file
+# Ignore codekit files
+.codekit-cache/
 config.codekit
