@@ -1,0 +1,24 @@
+// ------------------------------------------------------------
+// Website Width
+// ------------------------------------------------------------
+$max-width: em(1100) !default;
+
+
+// ------------------------------------------------------------
+// Override Neat's grid settings
+// ------------------------------------------------------------
+$column:       golden-ratio(1em, 3) !default; // Column width
+$gutter:       golden-ratio(1em, 3) !default; // Gutter between each two columns
+$grid-columns: 12 !default;
+
+
+// ------------------------------------------------------------
+// Breakpoints and media query definitions
+// ------------------------------------------------------------
+$small-screen:  em(500);
+$medium-screen: em(800);
+$large-screen:  em(860);
+
+$small:  new-breakpoint(min-width $small-screen);
+$medium: new-breakpoint(min-width $medium-screen);
+$large:  new-breakpoint(min-width $large-screen);
