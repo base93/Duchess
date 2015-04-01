@@ -1,21 +1,7 @@
 // Site Wrap
 .site-inner,
 .wrap {
-  margin: 0 auto;
-  max-width: $base-website-width;
-
-  @media only screen and (max-width: 800px) {
-    padding-right: 5%;
-    padding-left: 5%;
-  }
-
-  @media only screen and (max-width: 960px) {
-    max-width: 800px;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    max-width: 960px;
-  }
+  @include outer-container;
 }
 
 .site-inner {
@@ -24,101 +10,122 @@
 }
 
 
-// Wrapper Div for .content and .sidebar-primary
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  width: 980px;
+// Content-sidebar
+.content-sidebar {
+  .content {
+    @include fill-parent();
 
-  @media only screen and (max-width: 960px) {
-    width: 100%;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    width: 740px
-  }
-}
-
-.content-sidebar-sidebar .content-sidebar-wrap {
-  float: left;
-}
-
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  float: right;
-}
-
-
-// Content Area
-.content {
-  float: right;
-  width: 800px;
-
-  @media only screen and (max-width: 960px) {
-    width: 100%;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    width: 620px;
-  }
-
-  .content-sidebar &,
-  .content-sidebar-sidebar &,
-  .sidebar-content-sidebar & {
-    float: left;
-
-    @media only screen and (max-width: 960px) {
-      width: 100%;
+    @include media( $medium )  {
+      @include span-columns(8);
     }
   }
 
-  .content-sidebar-sidebar &,
-  .sidebar-content-sidebar &,
-  .sidebar-sidebar-content & {
-    width: 580px;
+  .sidebar-primary {
+    @include fill-parent();
 
-    @media only screen and (max-width: 1200px) {
-      width: 400px;
+    @include media( $medium )  {
+      @include span-columns(4);
+      @include omega();
+    }
+  }
+}
+
+
+// Sidebar-Content
+.sidebar-content {
+  .sidebar-primary {
+    @include fill-parent();
+    background-color: red;
+
+    @include media( $medium )  {
+      @include span-columns(4);
+      background-color: orange;
     }
   }
 
-  .full-width-content & {
-    width: 100%;
-  }
+  .content {
+    @include fill-parent();
+    background-color: red;
 
-}
-
-
-// Primary Sidebar
-.sidebar-primary {
-  float: right;
-  width: 360px;
-
-  @media only screen and (max-width: 960px) {
-    width: 100%;
-  }
-
-  @media only screen and (max-width: 1200px) {
-    width: 300px;
-  }
-
-  .sidebar-content &,
-  .sidebar-sidebar-content & {
-    float: left;
+    @include media( $medium )  {
+      @include span-columns(8);
+      @include omega();
+      background-color: orange;
+      float: right;
+    }
   }
 }
 
 
-// Secondary Sidebar
-.sidebar-secondary {
-  float: left;
-  width: 180px;
+// Content-Sidebar-Sidebar
+.content-sidebar-sidebar {
+  .content-sidebar-wrap {
+    @include span-columns(8);
 
-  @media only screen and (max-width: 960px) {
-    width: 100%;
+    .content {
+      @include span-columns(6 of 8);
+    }
+
+    .sidebar-primary {
+      @include span-columns(2 of 8);
+      @include omega();
+    }
   }
 
-  .content-sidebar-sidebar & {
+  .sidebar-secondary {
+    @include span-columns(4);
+    @include omega();
+  }
+}
+
+// Sidebar-Sidebar-Content
+.sidebar-sidebar-content {
+  .sidebar-secondary {
+    @include span-columns(4);
+  }
+
+  .content-sidebar-wrap {
+    @include span-columns(8);
+    @include omega();
     float: right;
+
+    .sidebar-primary {
+      @include span-columns(2 of 8);
+    }
+
+    .content {
+      @include span-columns(6 of 8);
+      @include omega();
+      float: right;
+    }
+  }
+}
+
+// Sidebar-Content-Sidebar
+.sidebar-content-sidebar {
+  .content-sidebar-wrap {
+    @include span-columns(8);
+
+    .sidebar-primary {
+      @include span-columns(2 of 8);
+    }
+
+    .content {
+      @include span-columns(6 of 8);
+      @include omega();
+      float: right;
+    }
+  }
+
+  .sidebar-secondary {
+    @include span-columns(4);
+    @include omega();
+  }
+}
+
+// Full-Width
+.full-width-content {
+  .content-sidebar-wrap {
+    @include fill-parent();
   }
 }
