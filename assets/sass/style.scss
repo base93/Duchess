@@ -12,12 +12,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 // 1: Settings
 //---------------------------------------------------
+@import "bourbon";
+@import "neat";
+@import "settings/_grid-settings";
 @import "settings/_settings.global";
 @import "settings/_settings.colours";
 
 // 2: Tools
 //---------------------------------------------------
-
 
 // 3: Generic
 //---------------------------------------------------
