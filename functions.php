@@ -44,6 +44,7 @@ function b93_theme_setup() {
   // Show Author Box (http://my.studiopress.com/snippets/author-box/)
   // add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
   // add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
+
 }
 
 
