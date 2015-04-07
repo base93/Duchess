@@ -534,6 +534,21 @@ img {
   .alignright .avatar {
     margin-left: 26px; }
 
+.media:after {
+  content: "";
+  display: table;
+  clear: both; }
+.media__img {
+  float: left;
+  margin-right: 26px; }
+  .media__img img {
+    display: block; }
+  .media__img--reversed {
+    float: left;
+    margin-left: 26px; }
+.media__body {
+  float: right; }
+
 .widget {
   word-wrap: break-word; }
   .widget ol > li {

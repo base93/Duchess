@@ -1,0 +1,24 @@
+.media {
+    @include clearfix;
+
+    // Image
+    &__img {
+        float: left;
+        margin-right: $base-spacing-unit;
+
+        img {
+            display:block;
+        }
+
+        // Reversed image
+        &--reversed {
+            float: left;
+            margin-left: $base-spacing-unit;
+        }
+    }
+
+    // Body
+    &__body {
+        float: right;
+    }
+}
